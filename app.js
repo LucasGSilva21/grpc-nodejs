@@ -12,7 +12,7 @@ gRpcServer.addService(taskProto.TaskService.service, {
     callback(null, { tasks });
   },
   find: (_, callback) => {
-    const task = tasks.find(el => el.id == _request.id);
+    const task = tasks.find(el => el.id == _.request.id);
     if (task) {
       callback(null, { task });
     }
